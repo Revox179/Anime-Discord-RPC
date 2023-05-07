@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Client Modifier</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-header">
+            <img src="{{ url_for('static', filename='img/discord_avatars/0.png') }}">
+            <div>Discord RPC</div>
+        </div>
+        <div class="menu-itemlist">
+            <a class="menu-item menu-item-selected" href="/">Home</a>
+            <a class="menu-item" href="/rpc">Rich Presence</a>
+            <a class="menu-item" href="/rpc_anime">Anime Presence</a>
+            <a class="menu-item shutdown" href="/exit">Exit Server</a>
+        </div>
+    </div>
+    <div class="content-field"></div>
+</body>
+
+</html>

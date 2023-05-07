@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Anime Discord RPC",
+    "version": "1.0",
+
+    "description": "Auto update DCM when watching Anime and server is running.",
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },      
+
+    "content_scripts":[
+        {
+         "matches":["https://aniworld.to/*", "https://www.crunchyroll.com/*"],
+         "js":["content.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "webNavigation",
+        "storage",
+        "tabs",
+        "webRequest",
+        "http://127.0.0.1:8000/*"
+    ],
+    
+    "browser_action": {
+        "default_icon": "icons/logo-32.png",
+        "default_title": "Test AddOn",
+        "default_popup": "popup/popup.html"
+    }
+}

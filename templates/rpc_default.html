@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Client Modifier</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-header">
+            <img src="{{ url_for('static', filename='img/discord_avatars/0.png') }}">
+            <div>Discord RPC</div>
+        </div>
+        <div class="menu-itemlist">
+            <a class="menu-item" href="/">Home</a>
+            <a class="menu-item menu-item-selected" href="/rpc">Rich Presence</a>
+            <a class="menu-item" href="/rpc_anime">Anime Presence</a>
+            <a class="menu-item shutdown" href="/exit">Exit Server</a>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="presence">
+            <div class="visualizer">
+                <div class="profile-banner"></div>
+                <div class="avatar-holder">
+                    <div class="avatar-box">
+                        <div class="avatar-image"></div>
+                        <div class="avatar-onlinestatus"></div>
+                    </div>
+                </div>
+                <div class="user-infos">
+                    <div class="user-infoheader">
+                        <span class="username">Username</span>
+                        <span class="usertag">#0001</span>
+                    </div>
+                    <div class="tab-bar">
+                        <div class="tab-item">User Info</div>
+                        <div class="tab-item tab-item-selected">Activity</div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="activity-box">
+                            <div class="activity-header">playing a game</div>
+                            <div class="activity-body">
+                                <div id="asset_holder" class="activity-asset">
+                                    <img id="asset" src="{{ url_for('static', filename='img/discord_avatars/0.png') }}" title="Logo">
+                                </div>
+                                <div class="activity-infobox">
+                                    <div class="activity-info" id="activity_name">Default</div>
+                                    <div class="activity-info" id="activity_detail">Idle</div>
+                                    <div class="activity-info" id="activity_state">
+                                        <span style="display: inline" id="activity_state_des" style="float: left;">Do something </span>
+                                        <span style="display: inline" id="activity_state_size">(1 of 5)</span>
+                                    </div>
+                                    <div class="activity-info">00:01 left</div>
+                                </div>
+                                <div class="activity-buttonbox">
+                                    <button class="activity-button">Join Activity</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="valuetable">
+                <div class="value-box">
+                    <div class="value-header">details</div>
+                    <input type="text" class="value-input" placeholder="Idle" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">state</div>
+                    <input type="text" class="value-input" placeholder="Do something" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">large image key</div>
+                    <input type="text" class="value-input" placeholder="0.png" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">large image text</div>
+                    <input type="text" class="value-input" placeholder="Logo" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">party id</div>
+                    <input type="text" class="value-input" placeholder="ae488379-351d-4a4f-ad32-2b9b01c91657" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">party members</div>
+                    <input type="text" class="value-input" placeholder="1" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">party size</div>
+                    <input type="text" class="value-input" placeholder="5" maxlength="100" value="">
+                </div>
+                <div class="value-box">
+                    <div class="value-header">join secret</div>
+                    <input type="text" class="value-input" placeholder="MTI4NzM0OjFpMmhuZToxMjMxMjM= " maxlength="100" value="">
+                </div>
+                <div class="error-box">
+                    This feature is currently not implemented!
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
