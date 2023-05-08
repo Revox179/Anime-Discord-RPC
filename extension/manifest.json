@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "Anime Discord RPC",
-    "version": "1.0",
+    "version": "1.1.0",
 
-    "description": "Auto update DCM when watching Anime and server is running.",
+    "description": "Free and OpenSource Firefox AddOn, allows you to get a rich presence display in Discord when watching anime. Please note that launching Rich Presence from the browser requires another background application to work.",
 
     "background": {
         "scripts": ["background.js"],
