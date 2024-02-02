@@ -162,13 +162,13 @@ body {
 
 .user-infoheader {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 12px 12px 0px;
 }
 
 .user-infoheader span {display: block;}
 
-.username {
+.displayname {
     color: #fff;
     line-height: 24px;
     font-size: 20px;
@@ -176,11 +176,11 @@ body {
     text-overflow: ellipsis;
 }
 
-.usertag {
+.username {
     color: #b9bbbe;
     line-height: 24px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     text-overflow: ellipsis;
 }
 

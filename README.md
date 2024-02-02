@@ -46,7 +46,7 @@ Various actions can be performed in the settings of the pop-up menu.
 ![Settingsmenu](doc_images/doc_3.png
 )
 
-The user name and the tag can be entered in the **layout section**. However, this is only relevant for the design of the local display of the add-on and has no effect on the display on Discord.  
+The users displayname and the username (previously discriminator) can be entered in the **layout section**. However, this is only relevant for the design of the local display of the add-on and has no effect on the display on Discord.  
 
 The possibility of **Auto-RPC** means that a display is automatically started when you watch anime on one of the [supported sites](#currently-supported-websitesstream-hosts), or is automatically stopped when you stop watching. Logically, the values of the current stream are used and not those entered.  
 This can be activated or deactivated via the option 'Enable Auto RPC'.  

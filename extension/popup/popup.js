@@ -90,8 +90,8 @@ function update_session() {
     browser.storage.local.get('anilist').then((item)=>{update_from_storage("anilist_link", item.anilist)}, storage_err)
     browser.storage.local.get('auto_rpc').then((item)=>{update_checkbox("auto_rpc", item.auto_rpc)}, storage_err)
     browser.storage.local.get('auto_streamsync').then((item)=>{update_checkbox("auto_streamsync", item.auto_streamsync)}, storage_err)
-    browser.storage.local.get('dc_name').then((item)=>{update_dc_name(item.dc_name)}, storage_err)
-    browser.storage.local.get('dc_tag').then((item)=>{update_dc_tag(item.dc_tag)}, storage_err)
+    browser.storage.local.get('dc_dname').then((item)=>{update_dc_dname(item.dc_dname)}, storage_err)
+    browser.storage.local.get('dc_uname').then((item)=>{update_dc_uname(item.dc_uname)}, storage_err)
     checkServerStatus()
 }
 
@@ -260,22 +260,22 @@ document.getElementById("arrow_back").addEventListener("click", ()=>{
 })
 
 // update-Functions for inputs of settings-page
-function update_dc_name(value) {
-    if (value == undefined) {value="Username"}
-    browser.storage.local.set({"dc_name": value});
-    document.getElementById("dc_name_inp").value = value
-    document.getElementById("username").innerText = value;
+function update_dc_dname(value) {
+    if (value == undefined) {value="PhiBi"}
+    browser.storage.local.set({"dc_dname": value});
+    document.getElementById("dc_dname_inp").value = value
+    document.getElementById("displayname").innerText = value;
 }
-function update_dc_tag(value) {
-    if (value == undefined) {value="0001"}
-    browser.storage.local.set({"dc_tag": value});
-    document.getElementById("dc_tag_inp").value = value
-    document.getElementById("usertag").innerText = "#"+value;
+function update_dc_uname(value) {
+    if (value == undefined) {value="phibiscool"}
+    browser.storage.local.set({"dc_uname": value});
+    document.getElementById("dc_uname_inp").value = value
+    document.getElementById("username").innerText = value;
 }
 
 // apply typing eventhandlers to inputs of settings-page
-document.getElementById("dc_name_inp").addEventListener("keyup", (e)=>{update_dc_name(e.target.value)})
-document.getElementById("dc_tag_inp").addEventListener("keyup", (e)=>{update_dc_tag(e.target.value)})
+document.getElementById("dc_dname_inp").addEventListener("keyup", (e)=>{update_dc_dname(e.target.value)})
+document.getElementById("dc_uname_inp").addEventListener("keyup", (e)=>{update_dc_uname(e.target.value)})
 
 // Function for style checkbox as enabled
 function enable_checkbox(id) {

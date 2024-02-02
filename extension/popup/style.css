@@ -95,13 +95,14 @@ body, html {
 }
 
 .user-info {
-    display: block;
-    padding: 64px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 16px 8px;
     outline: 0;
     white-space: normal;
 }
 
-.username {
+.displayname {
     display: inline;
     font-size: 20px;
     line-height: 24px;
@@ -109,11 +110,11 @@ body, html {
     font-weight: 700;
 }
 
-.usertag {
+.username {
     display: inline;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
-    color: #b9bbbe;
+    color: #dedfe1;
     font-weight: 400;
 }
 
